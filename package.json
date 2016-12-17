@@ -1,0 +1,27 @@
+{
+  "name": "richs-bamazon",
+  "version": "1.0.0",
+  "description": "bamazon homework assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbuccat/Bamazon.git"
+  },
+  "keywords": [
+    "mysql",
+    "inquirer"
+  ],
+  "author": "Richard Buccat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbuccat/Bamazon/issues"
+  },
+  "homepage": "https://github.com/rbuccat/Bamazon#readme",
+  "dependencies": {
+    "inquirer": "^2.0.0",
+    "mysql": "^2.12.0"
+  }
+}
