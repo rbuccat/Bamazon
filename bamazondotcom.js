@@ -47,14 +47,14 @@ var items = function(){
       							return false;
     					}
     				}).then(function(answer){
-    					if(parseInt(answer.quantity) < chosenID.stock_quantity){
+    					if(parseInt(answer.quantity) <= chosenID.stock_quantity){
     						var newQuantity = chosenID.stock_quantity - (parseInt(answer.quantity));
 							connection.query("UPDATE products SET ? WHERE ?", [{
                 				stock_quantity: newQuantity
               				}, {
                 				item_id: chosenID.item_id
               				}], function(err, res) {
-									var totalPrice = chosenID.price * parseInt(answer.quantity);
+									var totalPrice = parseFloat(chosenID.price * parseInt(answer.quantity)).toFixed(2);
 									console.log("\n--------------------------");
 									console.log("Your total for buying " + parseInt(answer.quantity) + " " + chosenID.product_name + " is $" + totalPrice);
 									console.log("--------------------------\n");
